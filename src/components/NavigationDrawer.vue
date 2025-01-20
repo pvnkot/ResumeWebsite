@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useGetResumeSection } from '@/stores/resume-sections'
+import { CONTACT_EMAIL } from '@/constants'
 
 const { resumeSections } = useGetResumeSection()
 </script>
@@ -7,9 +8,10 @@ const { resumeSections } = useGetResumeSection()
 <template>
   <v-navigation-drawer>
     <v-sheet class="pa-4" color="grey-lighten-4">
-      <v-avatar class="mb-4" color="grey-darken-1" size="64"></v-avatar>
-
-      <div>pvkottapalli@gmail.com</div>
+      <v-avatar size="220" color="grey-darken-1"
+        ><v-img src="@/assets/Santorini.jpg" alt="Pavan Kottapalli"
+      /></v-avatar>
+      <div>{{ CONTACT_EMAIL }}</div>
     </v-sheet>
 
     <v-divider></v-divider>
@@ -20,7 +22,7 @@ const { resumeSections } = useGetResumeSection()
         :key="id"
         :title="sectionName"
         link
-      ></v-list-item>
+      />
     </v-list>
   </v-navigation-drawer>
 </template>
