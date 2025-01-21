@@ -18,17 +18,3 @@ export const RESUME_SECTIONS_TO_DISPLAY: ResumeSectionId[] = [
   ResumeSectionId.Education,
   ResumeSectionId.AcademicProjects,
 ]
-
-export const enum PageRouteId {
-  TechSkills = 'tech-skills',
-  IndustryExperience = 'industry-experience',
-  Education = 'education',
-  AcademicProjects = 'academic-projects',
-}
-
-export const Routes: Record<PageRouteId, ResumeSectionId> = {
-  [PageRouteId.TechSkills]: ResumeSectionId.TechSkills,
-  [PageRouteId.IndustryExperience]: ResumeSectionId.IndustryExperience,
-  [PageRouteId.Education]: ResumeSectionId.Education,
-  [PageRouteId.AcademicProjects]: ResumeSectionId.AcademicProjects,
-}
